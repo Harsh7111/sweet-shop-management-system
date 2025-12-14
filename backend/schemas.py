@@ -20,8 +20,8 @@ class UserResponse(BaseModel):
     email: str
     is_admin: int
 
-    #class Config:
-    #    orm_mode = True
+    
+    
 
 
 # ---------------- SWEET SCHEMAS ----------------
@@ -47,5 +47,5 @@ class SweetResponse(BaseModel):
     price: float
     quantity: int
 
-    #class Config:
-    #    orm_mode = True
+   
+   

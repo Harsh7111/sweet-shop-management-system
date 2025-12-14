@@ -2,8 +2,8 @@ from datetime import datetime, timedelta
 from jose import jwt # type: ignore
 from passlib.context import CryptContext# type: ignore
 
-# Secret key for JWT (later move to .env)
-SECRET_KEY = "SECRET_KEY_CHANGE_LATER"
+# Secret key for JWT 
+SECRET_KEY = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
 

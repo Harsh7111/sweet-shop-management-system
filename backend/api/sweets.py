@@ -14,13 +14,13 @@ router = APIRouter(
     tags=["Sweets"]
 )
 
-# ✅ 1. Get all sweets (Public)
+#  1. Get all sweets (Public)
 @router.get("/", response_model=list[SweetResponse])
 def get_all_sweets(db: Session = Depends(get_db)):
     return db.query(Sweet).all()
 
 
-# ✅ 2. Add new sweet (ADMIN ONLY)
+#  2. Add new sweet (ADMIN ONLY)
 @router.post("/", response_model=SweetResponse)
 def add_sweet(
     sweet: SweetCreate,
@@ -55,7 +55,7 @@ def update_sweet(
     return db_sweet
 
 
-# ✅ 4. Delete sweet (ADMIN ONLY)
+#  4. Delete sweet (ADMIN ONLY)
 @router.delete("/{sweet_id}")
 def delete_sweet(
     sweet_id: int,
